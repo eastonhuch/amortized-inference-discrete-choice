@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{@{}rllrrrrr@{}}
+\toprule
+\multicolumn{1}{c}{$n$} & \multicolumn{1}{l}{DGP} & \multicolumn{1}{l}{Method} & \multicolumn{1}{c}{RMSE} & \multicolumn{1}{c}{RMS Bias} & \multicolumn{1}{c}{SE Ratio} & \multicolumn{1}{c}{Coverage} & \multicolumn{1}{r}{Time (s)} \\
+\midrule
+\multirow{5}{*}{1,000} & Emulator & Emulator & 0.562 (0.034) & 0.427 (0.026) & 1.57 (0.14) & 0.87 (0.02) & 2.23 (0.02) \\
+ & Probit & Emulator & 0.608 (0.038) & 0.465 (0.030) & 2.26 (0.59) & 0.84 (0.02) & 2.18 (0.02) \\
+ & Probit & GHK(10) & 0.650 (0.042) & 0.485 (0.032) & 0.31 (0.09) & 0.09 (0.02) & 5.90 (0.38) \\
+ & Probit & GHK(50) & 0.632 (0.039) & 0.480 (0.031) & 0.65 (0.09) & 0.32 (0.04) & 13.24 (0.62) \\
+ & Probit & GHK(250) & 0.621 (0.039) & 0.478 (0.030) & 1.66 (0.21) & 0.80 (0.03) & 14.63 (0.39) \\
+\midrule
+\multirow{5}{*}{10,000} & Emulator & Emulator & 0.284 (0.019) & 0.157 (0.017) & 1.86 (0.15) & 0.94 (0.01) & 19.18 (0.27) \\
+ & Probit & Emulator & 0.343 (0.022) & 0.180 (0.022) & 2.13 (0.25) & 0.91 (0.02) & 16.79 (0.21) \\
+ & Probit & GHK(10) & 0.415 (0.029) & 0.283 (0.024) & 1.70 (0.49) & 0.71 (0.03) & 8.70 (0.29) \\
+ & Probit & GHK(50) & 0.347 (0.020) & 0.201 (0.021) & 1.52 (0.11) & 0.85 (0.02) & 34.10 (0.85) \\
+ & Probit & GHK(250) & 0.337 (0.019) & 0.175 (0.022) & 1.63 (0.11) & 0.91 (0.02) & 47.98 (0.74) \\
+\midrule
+\multirow{5}{*}{100,000} & Emulator & Emulator & 0.115 (0.009) & 0.026 (0.007) & 1.14 (0.08) & 0.94 (0.01) & 143.74 (1.18) \\
+ & Probit & Emulator & 0.136 (0.011) & 0.042 (0.010) & 0.97 (0.06) & 0.92 (0.02) & 143.66 (1.28) \\
+ & Probit & GHK(10) & 0.231 (0.020) & 0.169 (0.014) & 0.62 (0.05) & 0.54 (0.03) & 31.11 (0.34) \\
+ & Probit & GHK(50) & 0.139 (0.012) & 0.062 (0.010) & 0.97 (0.06) & 0.90 (0.02) & 80.62 (0.80) \\
+ & Probit & GHK(250) & 0.137 (0.011) & 0.045 (0.010) & 0.98 (0.05) & 0.91 (0.01) & 348.26 (4.36) \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of Emulator and GHK estimation methods for multinomial probit models: Variance Parameters with $\numalt=10$}
+\label{tab:emulator_vs_ghk:10:variance}
+\end{table}

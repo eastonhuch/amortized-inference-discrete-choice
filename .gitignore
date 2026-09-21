@@ -1,0 +1,21 @@
+# Licensed NielsenIQ data and anything derived from it at the household level
+nielsen-data/
+analysis-results/
+*.log
+
+# Generated training buffers and intermediate state
+*-data-checkpoints/*
+!simulation-data-checkpoints/.gitkeep
+result-checkpoints/*
+!result-checkpoints/.gitkeep
+fitting-results/
+
+# Python / Jupyter / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Local tooling
+.claude/
+fixed_case_accuracy/
